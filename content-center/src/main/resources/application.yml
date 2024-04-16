@@ -7,6 +7,12 @@ spring:
       # >= 6.x: com.mysql.cj.jdbc.Driver
       # <= 5.x: com.mysql.jdbc.Driver
       driver-class-name: com.mysql.cj.jdbc.Driver
+  cloud:
+    nacos:
+      discovery:
+        # ??nacos server???
+        server-addr: localhost:8848
+        cluster-name: BJ
   application:
     # ???????-????_????????
     name: content-center
