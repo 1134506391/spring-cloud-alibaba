@@ -1,0 +1,24 @@
+package com.itmuch.contentcenter;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.Bean;
+import org.springframework.web.client.RestTemplate;
+import tk.mybatis.spring.annotation.MapperScan;
+
+import java.util.Collections;
+
+@MapperScan("com.itmuch.contentcenter.dao")
+@SpringBootApplication
+public class ContentCenterApplication {
+
+    public static void main(String[] args) {
+        SpringApplication.run(ContentCenterApplication.class, args);
+    }
+
+    @Bean
+    public RestTemplate restTemplate() {
+        RestTemplate template = new RestTemplate();
+        return template;
+    }
+}
