@@ -12,7 +12,8 @@ spring:
       discovery:
         # ??nacos server???
         server-addr: localhost:8848
-        cluster-name: BJ
+        namespace: 76cf2c29-211c-4d74-9991-592fd0be4c89
+#        cluster-name: BJ
   application:
     # ???????-????_????????
     name: content-center
@@ -26,3 +27,19 @@ ribbon:
   eager-load:
     enabled: true
     clients: user-center
+logging:
+  level:
+    com.itmuch.contentcenter.feignclient.UserCenterFeignClient: debug
+    com.alibaba.nacos: error
+#feign:
+#  sentinel:
+#
+#    # 为feign整合sentinel
+#    enabled: true
+#  client:
+#    config:
+#      # 全局配置
+#      default:
+#        loggerLevel: full
+#        requestInterceptors:
+#          - com.itmuch.contentcenter.feignclient.interceptor.TokenRelayRequestIntecepor
